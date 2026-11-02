@@ -1,0 +1,19 @@
+[workspace]
+members = ["clients/terminal", "crates/protocol","servers/core"]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+version = "0.0.1"
+
+[workspace.dependencies]
+mewmal-protocol = { path = "crates/protocol" }
+anyhow = "1"
+thiserror = "2"
+jsonrpsee = "0.26.1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1", features = ["derive"] }
+uuid = "1"
+clap = { version = "4", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

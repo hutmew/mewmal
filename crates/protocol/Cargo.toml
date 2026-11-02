@@ -1,0 +1,9 @@
+[package]
+name = "mewmal-protocol"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+jsonrpsee = { workspace = true, features = ["macros", "client-core", "server-core"] }
+serde = { workspace = true }
+uuid = { workspace = true, features = ["serde"] }

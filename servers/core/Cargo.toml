@@ -1,0 +1,15 @@
+[package]
+name = "core-server"
+version = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+mewmal-protocol = { workspace = true }
+jsonrpsee = { workspace = true, features = ["server"] }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread", "sync", "time", "signal"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+anyhow = { workspace = true }
+clap = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+thiserror = { workspace = true }
